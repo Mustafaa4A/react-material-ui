@@ -2,29 +2,29 @@ import Grid from '@mui/material/Grid'
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
-import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LockIcon from '@mui/icons-material/Lock';
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 
-const EmailSection = () => {
+const PasswordSection = () => {
   return (
     <div style={{margin:'20px 0'}}>
       <Grid container spacing={1}>
         <Grid xs={2} sx={{textAlign:'center'}}>
-          <MailOutlineIcon sx={{ fontSize: '50px' }} />
+          <LockIcon sx={{ fontSize: '50px' }} />
           <h3 style={{margin:'5px'}}>Change You Email</h3>
         </Grid>
         <Grid xs={10}>
           <Card sx={{backgroundColor:'white'}}>
             <CardContent>
               <h4 style={{margin:'5px'}}>
-                update your email address
+                update your password
               </h4>
-              <p>Your email is currenty </p>
               <form>
                 <TextField
-                  helperText="NEW EMAIL"
+                  helperText="CURRENT PASSWORD"
                   variant="standard"
+                  type={"password"}
                   focused
                   sx={{
                     width: '100%',
@@ -33,8 +33,9 @@ const EmailSection = () => {
                 />
 
                 <TextField
-                  helperText="QUIZLET PASSWORD"
+                  helperText="NEW PASSWORD"
                   variant="standard"
+                  type={"password"}
                   focused
                   sx={{
                     width: '100%',
@@ -42,8 +43,6 @@ const EmailSection = () => {
                   }}
                 />
                 <Button variant="contained" type='submit'>Submit</Button>
-                <p>If you forget your password, you can
-                  <Link href="#" underline="none"> Reset your password. </Link></p>
               </form>
 
             </CardContent>
@@ -54,4 +53,4 @@ const EmailSection = () => {
   )
 }
 
-export default EmailSection;
+export default PasswordSection;

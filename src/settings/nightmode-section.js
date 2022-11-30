@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Radio from '@mui/material/Radio';
+import { margin } from '@mui/system';
 
 const NightmodeSection = () => {
   return (
@@ -23,8 +24,35 @@ const NightmodeSection = () => {
                 defaultValue="light"
                 name="radio-buttons-group"
               >
-                <FormControlLabel value="dark" control={<Radio />}  />
-                <FormControlLabel value="light" control={<Radio />} />
+                <div style={{display:'flex'}}>
+                  <Box
+                        sx={{
+                          width: 90,
+                          height: 90,
+                          backgroundColor: '',
+                          border: '5px solid',
+                          borderColor: 'primary.dark',
+                          borderRadius: '10px',
+                      margin: '10px',
+                          
+                        }}
+                      >
+                        <FormControlLabel value="light" control={<Radio />} />
+                </Box>
+                 <Box
+                      sx={{
+                        width: 90,
+                        height: 90,
+                        backgroundColor: 'black',
+                        border: '5px solid',
+                      borderRadius: '10px',
+                        margin:'10px'
+                      }}
+                    >
+                      <FormControlLabel value="dark" control={<Radio />}  />
+                    </Box>
+                </div>
+                
               </RadioGroup>
             </CardContent>
           </Card>
